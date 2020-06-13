@@ -55,9 +55,9 @@ public class Serv extends Thread {
         ServerSocket srvSocket = null;
             try {
                 int i = 0; //connections counter
-                InetAddress ip;
-                ip = InetAddress.getByName("localhost");
-                srvSocket = new ServerSocket(port,0,ip);
+                InetAddress ip= InetAddress.getByName("192.168.0.100");
+               // ip = InetAddress.getByName("125.0.0.1");
+                srvSocket = new ServerSocket(port,2, ip);
                 System.out.println("Serv started...\n");
                 while (true) {
                     Socket socket = srvSocket.accept();

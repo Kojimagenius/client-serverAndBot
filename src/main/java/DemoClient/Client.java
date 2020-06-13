@@ -5,13 +5,13 @@ import java.net.InetAddress;
 import java.net.Socket;
 
 public class Client {
-    private static final int servPort = 6666;
-    private static final String localhost = "127.0.0.1";
+    private static final int servPort = 80;
+    private static final String localhost = "52.78.112.44";//92.244.246.114
 
     public static void main(String[] args) {
         Socket socket = null;
         try {
-            System.out.println("This is client side. Connecting to serv. IP: " + localhost + "port: " + servPort);
+            System.out.println("This is client side. Connecting to serv. IP: " + localhost + " port: " + servPort);
             InetAddress ipAddress= InetAddress.getByName(localhost);
             socket = new Socket(ipAddress, servPort);
             System.out.println("Connected succsessfully");
